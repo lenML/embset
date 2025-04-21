@@ -1,0 +1,40 @@
+{
+  "name": "@lenml/embset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "module": "dist/main.mjs",
+  "types": "dist/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.js",
+      "types": "./dist/main.d.ts",
+      "default": "./dist/main.mjs"
+    },
+    "./src/main.ts": {
+      "default": "./src/main.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup --minify",
+    "test": "jest",
+    "dev": "tsx watch",
+    "prepublish": "pnpm build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.52.4",
+    "@types/node": "^22.14.1",
+    "tslib": "^2.8.1",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "debug": "^4.4.0"
+  }
+}
